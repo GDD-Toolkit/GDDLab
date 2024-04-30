@@ -1,0 +1,104 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+  }
+  
+@font-face {
+    font-family: 'alegreya bold';
+    src: url(imagesAndFonts/AlegreyaSans-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'sans';
+    src: url(imagesAndFonts/SourceSans3-Regular.ttf);
+}
+
+body {
+    /* background-color: #F9F5E3; */
+    background-color: #E4F4FF;
+}
+  .body {
+    display: grid;
+   grid-template-columns: 2.3fr 1fr;
+   grid-template-rows: 35vh 65vh;
+   color: #253D5B;
+  }
+
+  .body>div {
+    /* border: solid; */
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    
+  }
+
+  .table {
+    grid-row-start: 1;
+    grid-row-end: 4;
+  }
+
+  h1, h2 {
+    font-family: 'alegreya bold';
+  }
+
+  .table h1 {
+    margin-bottom: 10px;
+  }
+
+  a {
+    display: block;
+    margin-top: 10px;
+    font-size: 1.1rem;
+    font-family: 'sans';
+    color: #253D5B;
+  }
+
+  .members {
+    background-color: white;
+    color: #253D5B;
+    border-radius: 10px;
+    height: 300px;
+    font-family: 'sans';
+  }
+
+  .members li {
+    margin-top: 5px;
+    list-style: none;
+    font-size: 1.1rem;
+    padding: 10px;
+  }
+
+  .description {
+    margin-top: 5px;
+    font-size: 1.1rem;
+    background-color: white;
+    border-radius: 10px;
+    font-family: 'sans';
+  }
+
+  .description p {
+    padding: 10px;
+  }
+
+  .team-description-box {
+    overflow: auto;
+  }
+
+  .team-members-box {
+    overflow: auto;
+  }
+
+  .home-btn {
+    padding: 10px;
+    background-color:#253D5B;
+    color: white;
+    border-radius: 10px;
+    margin-top: 15px;
+    border-style: none;
+  }
+
+  .home-btn:hover {
+    cursor: pointer;
+  }
