@@ -28,7 +28,9 @@ body {
 
   .body>div {
     /* border: solid; */
-    padding: 30px;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
     
   }
 
@@ -86,4 +88,17 @@ body {
 
   .team-members-box {
     overflow: auto;
+  }
+
+  .home-btn {
+    padding: 10px;
+    background-color:#253D5B;
+    color: white;
+    border-radius: 10px;
+    margin-top: 15px;
+    border-style: none;
+  }
+
+  .home-btn:hover {
+    cursor: pointer;
   }
