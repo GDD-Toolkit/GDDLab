@@ -1,0 +1,154 @@
+header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  * {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    background-image: url("./assets/wave.png");
+    background-size: cover;
+    min-height: 100%;
+  }
+  
+  header h1 {
+    color: #02386e;
+  }
+  
+  .main-menu {
+    background-color: rgba(0, 175, 245, 0.712);
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .main-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .main-menu ul li {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .main-menu ul li a {
+    display: block;
+    padding: 15px 20px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+  }
+  
+  .main-menu ul li a:hover {
+    background-color: #e2a4fbf6;
+  }
+  
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #89ccff;
+    border-top: 3px solid #25a8f9;
+    border-radius: 0 0 5px 5px;
+  }
+  
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+  .dropdown-menu li {
+    display: block;
+  }
+  
+  .dropdown-menu li a {
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dropdown-menu li a:hover {
+    background-color: #5728cc;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .icon {
+    width: calc(25% - 10px);
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    background: linear-gradient(to right, #66c2fb, #8f94fb);
+    transition: background-color 0.3s;
+  }
+  
+  .icon:hover {
+    background-color: #66c2fb;
+    background: linear-gradient(to right, #89f6dc, #a9ebf2);
+    transform: translateY(-8px);
+  }
+  
+  .icon:active {
+    background-color: #e0e0e0;
+  }
+  
+  .icon img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .label {
+    display: block;
+    margin-top: 10px;
+  }
+  
+  img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    max-height: 250px;
+  }
+
+  .image-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+
+  .main-image {
+    width: auto;
+    transform: scale(1.5);
+    border-radius: 20px;
+  }
+  
+  .header {
+    text-align: center;
+    margin-top: 40px;
+  }
