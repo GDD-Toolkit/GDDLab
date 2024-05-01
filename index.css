@@ -23,6 +23,8 @@ header {
   .main-menu {
     background-color: rgba(0, 175, 245, 0.712);
     padding: 10px 0;
+    display: flex;
+    justify-content: center;
   }
   
   .main-menu ul {
@@ -148,4 +150,5 @@ header {
   
   .header {
     text-align: center;
+    margin-top: 40px;
   }
