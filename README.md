@@ -36,7 +36,11 @@ Run the application
   npm run dev
 ```
 
-There's another way to run the application without using npm run dev, but I'm too lazy to remember what it was.
+Another way to run the application is via nodemon. This is a much better way because nodemon automatically updates your browser as file changes are detected:
+```bash
+  nodemon index
+```
+If you get a 'running scripts is disabled' error, run this in your console: Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 
 ## Authors
