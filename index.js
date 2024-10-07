@@ -1,5 +1,5 @@
 /* -- BACKEND SET UP -- */
-const portNumber = 5000;
+const portNumber = 9000;
 const path = require("path");
 const express = require("express");
 const { MongoClient, ServerApiVersion } = require("mongodb");
@@ -34,7 +34,7 @@ app.get("/requestForm", (request, response) => {
 });
 
 app.get("/bugForm", (request, response) => {
-    response.render("index", { activeTab: 'bugform' });
+    response.render("bugForm", { activeTab: 'bugform' });
 });
 
 app.get("/schedule", (request, response) => {

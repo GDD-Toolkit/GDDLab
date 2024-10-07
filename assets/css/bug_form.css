@@ -2,6 +2,74 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Eczar:wght@400..800&display=swap');
 
+:root {
+  --dark-green: #3e5b5b;
+  --med-green: #578574;
+  --light-green: #8ab380;
+  --yellow-green: #d8df81;
+  --beige: #f4f2dc;
+  --white: #fafafa;
+  --red: #CF0303;
+  --black: #1E1E1E;
+}
+
+html {
+  font-family: 'Eczar', sans-serif;
+}
+
+.GDDLabHeader {
+  color: var(--dark-green);
+  font-size: 3em;
+  margin: 0;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--beige);
+  border-radius: 50px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  box-shadow: 10px 10px 9px -1px rgba(0,0,0,0.3);
+}
+
+.defNav {
+  font-family: 'Ezcar', serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: var(--dark-green);
+  background-color: transparent;
+  width: fit-content;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-family: 'Eczar', sans-serif;
+}
+
+.active {
+  font-size: 1.5rem;
+  background-color: var(--dark-green);
+  color: var(--white);
+  text-decoration: none;
+  width: fit-content;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 50px;
+  font-family: 'Eczar', sans-serif;
+  font-weight: 500;
+}
+
 title{
     color: #3e5b5b;
 }
