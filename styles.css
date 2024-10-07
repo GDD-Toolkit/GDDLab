@@ -1,0 +1,95 @@
+body {
+  font-family: 'Eczar', serif;
+  background-color: #f4f2dc;
+  padding: 20px;
+}
+
+.form-container {
+  background-color: #F9F9F9;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.form-container h1 {
+  text-align: center;
+  font-size: 64px;
+  color: #3E5B5B;
+  margin-bottom: 20px;
+}
+
+.form-container h2 {
+  font-size: 32px;
+  color: #3E5B5B;
+  margin-bottom: 10px;
+}
+
+.form-description {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #3E5B5B;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 700;
+  color: #3E5B5B;
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 24px;
+}
+
+.priority-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.priority-group label {
+  font-size: 24px;
+}
+
+.priority-group input[type="radio"] {
+  margin-right: 5px;
+}
+
+.button-group {
+  text-align: center;
+}
+
+.button-group button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 25px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.button-group button.submit {
+  background-color: #8AB380;
+  color: white;
+}
+
+.button-group button.clear {
+  background-color: #D8DF81;
+  color: white;
+}
+
+.required {
+  color: red;
+}
