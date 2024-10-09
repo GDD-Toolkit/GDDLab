@@ -70,6 +70,68 @@ nav {
   font-weight: 500;
 }
 
-title{
-    color: #3e5b5b;
+form{
+  margin-left: 25%;
+  margin-right: 25%;
+  padding: 40px;
+  box-shadow: 10px 10px 9px -1px rgba(0,0,0,0.3);
+  border-radius: 30px;
+}
+
+div{
+  padding:15px;
+}
+
+#header{
+  margin: auto;
+  font-size: 2.5em;
+  display: flex;
+  justify-content: center;
+  color: var(--dark-green);
+}
+
+#header-description{
+ padding-left: 15px;
+ padding-right: 15px;
+}
+
+h3{
+  color: var(--med-green);
+  font-size: 1.4em;
+}
+
+textarea{
+ display: flex;
+ width: 90%;
+}
+
+#location{
+  height: 80px;
+}
+
+#description{
+  height: 160px;
+}
+
+#buttons{
+  display: flex;
+  justify-content: center;
+}
+
+#clear{
+  background-color: var(--yellow-green);
+}
+
+#submit{
+  background-color: var(--light-green);
+}
+
+.button{
+  border-radius: 50px;
+  border-width: 0;
+  font-weight: bold;
+  margin: 20px;
+  width: 200px;
+  height: 50px;
+  font-size: 1.5em;
 }
