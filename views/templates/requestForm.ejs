@@ -5,10 +5,108 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GDDLab</title>
-
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="css/styling.css" />
   </head>
   <body>
-    <%- include('navbar') %>
-  </body>
-</html>
+    <%-include('navbar')%>
+
+      <div class="form-container">
+        <h1>REQUEST FORM</h1>
+        <p class="form-description">
+          This form is the first process in implementing/adding the requested feature or content. Once submitted, the form will be handed to Human-Centered Design who will contact the POC for feedback and approval. Finally, the design will be handed to Infrastructure and Interface for implementation.
+        </p>
+    
+        <form action="/submit" method="POST" enctype="multipart/form-data">
+          <!-- Contact Information title  -->
+          <h2>Contact Information</h2>
+    
+          <div class="form-group">
+            <label for="name">Name <span class="required">*</span></label>
+            <input type="text" id="name" name="name" required>
+          </div>
+    
+          <div class="form-group">
+            <label for="email">Email <span class="required">*</span></label>
+            <input type="email" id="email" name="email" required>
+          </div>
+    
+          <div class="form-group">
+            <label for="module">Module Team <span class="required">*</span></label>
+            <select id="module" name="module" required>
+                <option value="module1">Development Ethics</option>
+                <option value="module1">Project Evaluation</option>
+                <option value="module1">Training & Knowledge</option>
+                <option value="module2">Human Center Design</option>
+                <option value="module1">Project Planning</option>
+                <option value="module1">Infrastructure & Interface</option>
+                <option value="module2">Public Policy</option>
+                <option value="module2">Operational Protocol</option>
+            </select>
+          </div>
+    
+          <!-- Asset Information -->
+          <h2>Asset Information</h2>
+          <p>Please indicate the type of asset.<span class="required">*</span></p>
+          <p>There are two choices: Content and Feature. Content is a body of information to be migrated in the toolkit or in an affiliated, pre-existing tool. Feature is a tool that does not yet exist anywhere. </p>
+    
+          <div class="form-group">
+            <select id="type" name="type" required>
+              <option value="content">Select type of asset</option>
+              <option value="content">Content</option>
+              <option value="feature">Feature</option>
+            </select>
+          </div>
+    
+          <!-- New Content-related Question -->
+          <div class="form-group">
+            <label for="content-location">If this is content-related, what page and/or where in the page specifically should the asset be?<span class="required">*</span></label>
+            <textarea id="content-location" name="content-location" rows="2"></textarea>
+          </div>
+    
+          <!-- New Title of Asset Question -->
+          <div class="form-group">
+            <label for="asset-title">What is the title of the asset? <span class="required">*</span></label>
+            <input type="text" id="asset-title" name="asset-title" required>
+          </div>
+    
+          <!-- Updated Attach File -->
+          <div class="form-group">
+            <label for="file">Please attach a video or image of the asset envisioned.</label>
+            <input type="file" id="file" name="file">
+          </div>
+    
+          <div class="form-group">
+            <label for="description">Please provide a detailed description of the purpose of the asset, what it encases, and (if applicable) how it is supposed to function. <span class="required">*</span></label>
+            <textarea id="description" name="description" rows="5" required></textarea>
+          </div>
+    
+          <!-- Priority -->
+          <div class="priority-group">
+            <label>Select the level of priority <span class="required">*</span></label>
+            <div class="priority-option">
+              <input type="radio" id="high" name="priority" value="high" required>
+              <label for="high" class="high-priority">High</label>
+              <span class="priority-description">Get this done ASAP</span>
+            </div>
+            <div class="priority-option">
+              <input type="radio" id="medium" name="priority" value="medium" required>
+              <label for="medium" class="medium-priority">Medium</label>
+              <span class="priority-description">Not Sure</span>
+            </div>
+            <div class="priority-option">
+              <input type="radio" id="low" name="priority" value="low" required>
+              <label for="low" class="low-priority">Low</label>
+              <span class="priority-description">When possible</span>
+            </div>
+          </div>
+  
+          <!-- Buttons -->
+          <div class="button-group">
+            <button type="reset" class="clear">Clear</button>
+            <button type="submit" class="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+      <script src="script.js"></script>
+    </body>
+    </html>

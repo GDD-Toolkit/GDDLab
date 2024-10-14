@@ -1,0 +1,190 @@
+/* Global CSS stuff */
+@import url('https://fonts.googleapis.com/css2?family=Eczar:wght@400..800&display=swap');
+
+:root {
+  --dark-green: #3e5b5b;
+  --med-green: #578574;
+  --light-green: #8ab380;
+  --yellow-green: #d8df81;
+  --beige: #f4f2dc;
+  --white: #fafafa;
+  --red: #CF0303;
+  --black: #1E1E1E;
+}
+
+html {
+  font-family: 'Eczar', sans-serif;
+}
+
+.GDDLabHeader {
+  color: var(--dark-green);
+  font-size: 3em;
+  margin: 0;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--beige);
+  border-radius: 50px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  box-shadow: 10px 10px 9px -1px rgba(0,0,0,0.3);
+}
+
+.defNav {
+  font-family: 'Ezcar', serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: var(--dark-green);
+  background-color: transparent;
+  width: fit-content;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-family: 'Eczar', sans-serif;
+}
+
+.active {
+  font-size: 1.5rem;
+  background-color: var(--dark-green);
+  color: var(--white);
+  text-decoration: none;
+  width: fit-content;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 50px;
+  font-family: 'Eczar', sans-serif;
+  font-weight: 500;
+}
+
+body {
+  font-family: 'Eczar', serif;
+  background-color: #f4f2dc;
+  padding: 20px;
+}
+
+.form-container {
+  background-color: #F9F9F9;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 700px;
+  margin: 50px auto 0 auto;
+}
+
+.form-container h1 {
+  text-align: center;
+  font-size: 64px;
+  color: #3E5B5B;
+  margin-bottom: 20px;
+}
+
+.form-container h2 {
+  font-size: 32px;
+  color: #3E5B5B;
+  margin-bottom: 10px;
+}
+
+.form-description {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #3E5B5B;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 700;
+  color: #3E5B5B;
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 24px;
+}
+
+.priority-option input[type="radio"] {
+  margin-right: 10px; 
+  cursor: pointer; 
+}
+
+
+.priority-option label {
+  font-size: 16px; 
+}
+
+
+.priority-description {
+  display: block;
+  font-size: 15px;
+  color: #3e5b5b;
+  margin-top: 10px;
+  margin-left: 30px; 
+}
+
+.priority-option {
+  margin-bottom: 20px;
+}
+
+
+.priority-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.priority-group label {
+  font-size: 24px;
+}
+
+.priority-group input[type="radio"] {
+  margin-right: 5px;
+}
+
+.button-group {
+  text-align: center;
+}
+
+.button-group button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 25px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.button-group button.submit {
+  background-color: #8AB380;
+  color: white;
+}
+
+.button-group button.clear {
+  background-color: #D8DF81;
+  color: white;
+}
+
+.required {
+  color: red;
+}
