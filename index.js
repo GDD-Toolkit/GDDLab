@@ -30,11 +30,11 @@ app.get("/", (request, response) => {
 });
 
 app.get("/requestForm", (request, response) => {
-    response.render("index", { activeTab: 'requestform' });
+    response.render("requestForm", { activeTab: 'requestform' });
 });
 
 app.get("/bugForm", (request, response) => {
-    response.render("index", { activeTab: 'bugform' });
+    response.render("bugForm", { activeTab: 'bugform' });
 });
 
 app.get("/schedule", (request, response) => {
