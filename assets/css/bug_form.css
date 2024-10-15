@@ -1,5 +1,4 @@
 /*Style for bugForm.ejs*/
-
 @import url('https://fonts.googleapis.com/css2?family=Eczar:wght@400..800&display=swap');
 
 :root {
@@ -13,7 +12,7 @@
   --black: #1E1E1E;
 }
 
-html {
+* {
   font-family: 'Eczar', sans-serif;
 }
 
@@ -70,17 +69,19 @@ nav {
   font-weight: 500;
 }
 
-form{
-  margin-left: 25%;
-  margin-right: 25%;
-  padding: 40px;
+.form-container {
+  width: 60%;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 40px;
   box-shadow: 10px 10px 9px -1px rgba(0,0,0,0.3);
   border-radius: 30px;
+  background-color: #f9f9f9;
 }
 
-div{
-  padding:15px;
-}
 
 #header{
   margin: auto;
@@ -91,26 +92,137 @@ div{
 }
 
 #header-description{
- padding-left: 15px;
- padding-right: 15px;
+ padding-left: 10px;
+ padding-right: 10px;
+ margin: 0;
+ padding-bottom: 10px;
 }
 
-h3{
+.form-subcontainer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+#contact-info, #bug-info{
   color: var(--med-green);
   font-size: 1.4em;
+  margin: 0;
+  font-weight: 500;
 }
 
-textarea{
+#name, #email, #module, #bugType {
+  width: 50%;
+  border-radius: 5px;
+  border: solid black;
+  padding: 5px 5px;
+  margin-bottom: 15px;
+  border-width: 2px;
+  font-size: 1rem;
+}
+
+#module-team {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.bug-type-container {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  margin-bottom: 15px;
+}
+
+#bugType {
+  width: 20%;
+}
+
+#bugLocation, #desc-container{
  display: flex;
- width: 90%;
+ flex-direction: column;
+ width: 95%;
+ height: 40%;
+ border-radius: 5px;
+ padding: 5px 5px;
 }
 
-#location{
-  height: 80px;
+#file-upload {
+  display: flex;
+  flex-direction: column;
 }
 
-#description{
+#file-upload-ins {
+  margin-top: 30px;
+}
+
+.alt {
+  margin: 0;
+}
+
+#bugGoogleDrive {
+  width: 50%;
+  margin-top: 0;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  padding: 5px 5px;
+  font-size: 1rem;
+}
+
+#description, #bugLocation{
   height: 160px;
+  border: solid black;
+  border-width: 2px;
+  font-size: 1rem;
+}
+
+#description label {
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+#priority-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  width: 95%;
+}
+
+#priority-container div {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+#priority-container div label {
+  font-weight: bold;
+}
+
+#priority-container div p {
+ padding: 0;
+ margin-top: 0;
+}
+
+.date-container {
+  display: flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+  width: 50%;
+  justify-content: space-between;
+}
+
+.date-container input {
+  border-radius: 5px;
+  height: 20px;
+  width: 100px;
+  padding: 5px 5px;
+  margin: 0;
+  align-self: center;
+}
+
+.slash {
+  font-weight: 300;
+  font-size: 2rem;
+  margin: 0;
 }
 
 #buttons{
@@ -134,4 +246,9 @@ textarea{
   width: 200px;
   height: 50px;
   font-size: 1.5em;
+}
+
+#file-upload {
+  margin-bottom: 15px;
+  margin-top: 15px;
 }

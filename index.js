@@ -1,5 +1,5 @@
 /* -- BACKEND SET UP -- */
-const portNumber = 9000;
+const portNumber = 5000;
 const path = require("path");
 const express = require("express");
 const multer = require('multer');
@@ -54,29 +54,32 @@ const storage = multer.diskStorage({
   
 const upload = multer({ storage: storage });
 
-app.post("/submitBug", upload.single('file'), async (req, res) => {
+app.post("/submitBug", upload.single('bugMedia'), async (req, res) => {
     try {
       await client.connect();
       // Grab form data
-      const { name, email, module, location, description, priority, due_date } = req.body;
+      const { name, email, moduleTeam, bugType, bugLocation, bugGoogleDrive, bugDesc, priority, month, day, year } = req.body;
   
       // Map to bugResponse structure
       const newBugResponse = {
         name: name || '',
         email: email || '',
-        moduleTeam: module || '',
-        bugType: BugType.TOOLKIT, // Assuming it's from toolkit for now
-        bugLocation: location || '',
+        moduleTeam: moduleTeam || '',
+        bugType: bugType === 'TOOL' ? BugType.TOOL : BugType.TOOLKIT,
+        bugLocation: bugLocation || '',
         bugMedia: req.file ? req.file.path : null, // Store file path
-        bugDesc: description || '',
+        bugGoogleDrive: bugGoogleDrive || '',
+        bugDesc: bugDesc || '',
         priority: priority || Priority.NA,
-        targetDate: due_date ? new Date(due_date) : new Date(),
+        targetDate: month && day && year ? new Date(year, month - 1, day) : new Date(),
       };
+
+      console.log(newBugResponse);
   
       // Insert the bug response into MongoDB
       await bugResponses.insertOne(newBugResponse);
   
-      // Redirect or send a success message
+      // Redirect or send a success message -- need to change after creating confirmation page
       res.send("Bug report submitted successfully!");
       console.log(newBugResponse);
     } catch (error) {
