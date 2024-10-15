@@ -75,7 +75,7 @@ app.post("/submitBug", upload.single('bugMedia'), async (req, res) => {
       };
 
       console.log(newBugResponse);
-  
+   
       // Insert the bug response into MongoDB
       await bugResponses.insertOne(newBugResponse);
   
