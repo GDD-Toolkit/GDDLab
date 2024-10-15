@@ -42,6 +42,57 @@ app.get("/schedule", (request, response) => {
 });
 
 /* -- BACKEND STUFF FOR PAGES -- */
+//Request Form Backend
+app.post("/submit", async(request, response) => {
+    const name = request.body.name;
+    const email = request.body.email;
+    const moduleTeam = request.body.moduleTeam;
+    if(request.body.assetType == 'CONTENT'){
+        assetType = AssetType.CONTENT;
+    } else if(request.body.assetType == 'FEATURE'){
+        assetType = AssetType.FEATURE;
+    } else {
+        assetType = AssetType.NA;
+    }
+    const assetLocation = request.body.assetLocation;
+    const assetTitle = request.body.assetTitle;
+    const assetMedia = request.body.bugMedia;
+    const assetDesc = request.body.assetDesc;
+    if(request.body.priority == 'LOW'){
+        priority = Priority.LOW;
+    } else if(request.body.priority == 'MEDIUM'){
+        priority = Priority.MEDIUM;
+    } else if(request.body.priority == 'HIGH'){
+        priority = Priority.HIGH;
+    } else {
+        priority = Priority.NA;
+    }
+    const priority = request.body.priority;
+    const targetDate = new Date(request.body.year, request.body.month, request.body.day);
+    
+    try {
+        await client.connect();
+    
+        const requestReponse = {
+            name: name,
+            email: email,
+            moduleTeam: moduleTeam,
+            assetType: assetType,
+            assetLocation: assetLocation,
+            assetTitle: assetTitle,
+            assetMedia: assetMedia,
+            assetDesc: assetDesc,
+            priority: priority,
+            targetDate: targetDate
+        };
+    
+        await requestReponses.insertOne(requestResponse);
+    } catch(e){
+        console.error(e);
+    } finally {
+        await client.close();
+    }
+    });
 
 /* -- KEEP THIS AT BOTTOM -- */
 console.log(`Web server started and running at http://localhost:${portNumber}`);
