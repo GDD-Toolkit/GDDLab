@@ -1,14 +1,132 @@
 <!DOCTYPE html>
 
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GDDLab</title>
 
-    <link rel="stylesheet" href="index.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GDDLab</title>
+
+  <link rel="stylesheet" href="/css/bug_form.css" />
+
   </head>
   <body>
-    <%- include('navbar') %>
-  </body>
+    <section>
+      <%- include('navbar') %>
+      <br><br>
+      <form action="/submitBug" method="POST" enctype="multipart/form-data" class="form-container">
+        <h1 id="header">BUG FORM</h1>
+
+        <p id="header-description">This form is the first process in
+          removing/resolving a bug observed in the toolkit or in an affiliated
+          tool. Once submitted, the form will be handed to Infrastructure and
+          Interface for review and will then go into the process of being resolved.</p>
+
+        <h3 id="contact-info">Contact Information</h3>
+        <div class="form-subcontainer">
+          <div class="name-container">
+            <label for="name">Name <span style="color:red">*</span></label><br>
+            <input type="text" id="name" name="name" required><br>
+          </div>
+
+          <div class="email-container">
+            <label for="email">Email <span style="color:red">*</span></label><br>
+            <input type="email" id="email" name="email" required><br>
+          </div>
+
+          <div id="module-team">
+            <label for="module">Module Team <span style="color:red">*</span></label>
+            <select id="module" name="moduleTeam" required>
+              <option value="">Select your module team</option>
+              <option value="training">Training and Knowledge Development</option>
+              <option value="public">Public Policy</option>
+              <option value="project plan">Project Planning</option>
+              <option value="project eval">Project Evaluation</option>
+              <option value="operational">Operational Protocols</option>
+              <option value="infrastructure">Infrastructure and Interface</option>
+              <option value="human-centered">Human-Centered Design</option>
+              <option value="dev ethics">Development Ethics</option>
+            </select>
+          </div>
+        </div>
+
+
+        <h3 id="bug-info">Bug Information</h3>
+        <div class="form-subcontainer">
+          <div class="bug-type-container">
+            <label for="bugtype">
+              Please indicate whether the bug is occurring in the toolkit or in a certain GDD-affiliated tool.
+            </label>
+            <select id="bugType" name="bugType" required>
+              <option value="TOOLKIT">Toolkit</option>
+              <option value="TOOL">Tool</option>
+            </select>
+          </div>
+
+          <div class="desc-container">
+            <label for="location">If this bug is occurring in the toolkit, what page
+              and where in the page <b>specifically</b> is the bug occurring? If this
+              bug is occurring in a GDD-affiliated software tool, where is it
+              occurring? <span style="color:red">*</span></label>
+            <textarea id="bugLocation" name="bugLocation" required></textarea>
+          </div>
+
+          <div id="file-upload">
+            <label for="file_upload" id="file-upload-ins">Please attach a video or image of the bug or if you have multiple files, please put them in a google folder and paste the link below.
+              <span style="color:red"></span>
+            </label>
+            <p class="alt">Attach the video or image here: </p>
+            <input type="file" id="bugMedia" name="bugMedia">
+            <br>
+            <p class="alt">Or attach a google folder: </p>
+            <input type="text" id="bugGoogleDrive" name="bugGoogleDrive" />
+          </div>
+
+          <div id="desc-container">
+            <label for="description">Please provide a <b>detailed</b> description of
+              the bug such as events that lead to the bug occurring, the expected
+              outcome after the events, and the actual outcome (the bug).
+              <span style="color:red">*</span></label>
+            <textarea id="description" name="bugDesc" required></textarea><br>
+          </div>
+
+          <label for="priority">Select the level of priority <span style="color:red">*</span></label>
+          <div id="priority-container">
+            <div>
+              <input type="radio" id="high" name="priority" value="High">
+              <label for="high">High</label>
+              <p>Get this done ASAP</p>
+            </div>
+            <div>
+              <input type="radio" id="medium" name="priority" value="Medium">
+              <label for="medium">Medium</label>
+              <p>Not sure</p>
+            </div>
+            <div>
+              <input type="radio" id="low" name="priority" value="Low">
+              <label for="low">Low</label>
+              <p>When possible</p>
+            </div>
+          </div>
+
+          <label for="due_date">When should this bug be fixed by? (Enter in the form: mm/dd/yyyy)</label><br>
+          <div class="date-container">
+            <input type="string" id="month" name="month">
+            <p class="slash">/</p>
+            <input type="string" id="day" name="day">
+            <p class="slash">/</p>
+            <input type="string" id="year" name="year">
+          </div>
+        </div>
+
+        <div id="buttons">
+          <input class="button" id="clear" type="reset" value="Clear">
+          <input class="button" id="submit" type="submit">
+        </div>
+
+      </form>
+
+  </section>
+</body>
+
 </html>

@@ -1,4 +1,4 @@
-/* Global CSS stuff */
+/*Style for bugForm.ejs*/
 @import url('https://fonts.googleapis.com/css2?family=Eczar:wght@400..800&display=swap');
 
 :root {
@@ -69,12 +69,6 @@ nav {
   font-weight: 500;
 }
 
-body {
-  font-family: 'Eczar', serif;
-  background-color: #f4f2dc;
-  padding: 20px;
-}
-
 .form-container {
   width: 60%;
   margin-top: 30px;
@@ -88,7 +82,8 @@ body {
   background-color: #f9f9f9;
 }
 
-#header {
+
+#header{
   margin: auto;
   font-size: 2.5em;
   display: flex;
@@ -97,33 +92,25 @@ body {
 }
 
 #header-description{
-  padding-left: 10px;
-  padding-right: 10px;
-  margin: 0;
-  padding-bottom: 10px;
- }
-
-#header-description{
-  padding-left: 10px;
-  padding-right: 10px;
-  margin: 0;
-  padding-bottom: 10px;
- }
-
+ padding-left: 10px;
+ padding-right: 10px;
+ margin: 0;
+ padding-bottom: 10px;
+}
 
 .form-subcontainer {
   padding-left: 15px;
   padding-right: 15px;
 }
 
-#contact-info, #asset-info{
+#contact-info, #bug-info{
   color: var(--med-green);
   font-size: 1.4em;
   margin: 0;
   font-weight: 500;
 }
 
-#name, #email, #module, #assetType, #assetTitle {
+#name, #email, #module, #bugType {
   width: 50%;
   border-radius: 5px;
   border: solid black;
@@ -139,35 +126,33 @@ body {
   margin-bottom: 15px;
 }
 
-#content-related-container{
+.bug-type-container {
   display: flex;
   flex-direction: column;
   width: 95%;
-  height: 40%;
-  border-radius: 5px;
   margin-bottom: 15px;
-  margin-top: 15px;
- }
+}
 
- #assetLocation {
-  border-radius: 5px;
-  padding: 5px 5px;
- }
+#bugType {
+  width: 20%;
+}
 
- .asset-title-container {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 15px;
- }
+#bugLocation, #desc-container{
+ display: flex;
+ flex-direction: column;
+ width: 95%;
+ height: 40%;
+ border-radius: 5px;
+ padding: 5px 5px;
+}
 
-
- #file-upload-container {
+#file-upload {
   display: flex;
   flex-direction: column;
 }
 
 #file-upload-ins {
-  margin-top: 15px;
+  margin-top: 30px;
 }
 
 .alt {
@@ -177,20 +162,23 @@ body {
 #bugGoogleDrive {
   width: 50%;
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   border-radius: 5px;
   padding: 5px 5px;
   font-size: 1rem;
 }
 
-.asset-desc-container {
-  display: flex;
-  flex-direction: column;
-  border-radius: 5px;
+#description, #bugLocation{
+  height: 160px;
+  border: solid black;
+  border-width: 2px;
   font-size: 1rem;
-  margin-bottom: 30px;
 }
 
+#description label {
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
 
 #priority-container {
   display: flex;
@@ -254,9 +242,9 @@ body {
   border-radius: 50px;
   border-width: 0;
   font-weight: bold;
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
   width: 200px;
   height: 50px;
   font-size: 1.5em;
@@ -265,8 +253,4 @@ body {
 #file-upload {
   margin-bottom: 15px;
   margin-top: 15px;
-}
-
-.required {
-  color: red;
 }
