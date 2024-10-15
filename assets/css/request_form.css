@@ -149,9 +149,11 @@ body {
   margin-top: 15px;
  }
 
- #assetLocation {
+ #assetLocation, #description {
   border-radius: 5px;
   padding: 5px 5px;
+  border: solid black;
+  border-width: 2px;
  }
 
  .asset-title-container {
