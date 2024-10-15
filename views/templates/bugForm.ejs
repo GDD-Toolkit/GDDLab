@@ -7,15 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GDDLab</title>
 
-  <link rel="stylesheet" href="css/bug_form.css" />
+  <link rel="stylesheet" href="/css/bug_form.css" />
 
-</head>
-
-<body>
-  <section>
-    <%- include('navbar') %>
-
-      <form class="form-container">
+  </head>
+  <body>
+    <section>
+      <%- include('navbar') %>
+      <br><br>
+      <form action="/submitBug" method="POST" enctype="multipart/form-data" class="form-container">
         <h1 id="header">BUG FORM</h1>
 
         <p id="header-description">This form is the first process in
@@ -32,12 +31,12 @@
 
           <div class="email-container">
             <label for="email">Email <span style="color:red">*</span></label><br>
-            <input type="text" id="email" name="email" required><br>
+            <input type="email" id="email" name="email" required><br>
           </div>
 
           <div id="module-team">
             <label for="module">Module Team <span style="color:red">*</span></label>
-            <select id="module" name="module" required>
+            <select id="module" name="moduleTeam" required>
               <option value="">Select your module team</option>
               <option value="training">Training and Knowledge Development</option>
               <option value="public">Public Policy</option>
@@ -58,7 +57,7 @@
             <label for="bugtype">
               Please indicate whether the bug is occurring in the toolkit or in a certain GDD-affiliated tool.
             </label>
-            <select id="bugType" name="bugtype" required>
+            <select id="bugType" name="bugType" required>
               <option value="TOOLKIT">Toolkit</option>
               <option value="TOOL">Tool</option>
             </select>
@@ -73,10 +72,14 @@
           </div>
 
           <div id="file-upload">
-            <label for="file_upload">Please attach a video or image of the bug.
-              <span style="color:red">*</span>
+            <label for="file_upload" id="file-upload-ins">Please attach a video or image of the bug or if you have multiple files, please put them in a google folder and paste the link below.
+              <span style="color:red"></span>
             </label>
-            <input type="file" id="bugMedia" name="bugMedia" required>
+            <p class="alt">Attach the video or image here: </p>
+            <input type="file" id="bugMedia" name="bugMedia">
+            <br>
+            <p class="alt">Or attach a google folder: </p>
+            <input type="text" id="bugGoogleDrive" name="bugGoogleDrive" />
           </div>
 
           <div id="desc-container">
@@ -84,7 +87,7 @@
               the bug such as events that lead to the bug occurring, the expected
               outcome after the events, and the actual outcome (the bug).
               <span style="color:red">*</span></label>
-            <textarea id="description" name="description" required></textarea><br>
+            <textarea id="description" name="bugDesc" required></textarea><br>
           </div>
 
           <label for="priority">Select the level of priority <span style="color:red">*</span></label>
@@ -106,7 +109,7 @@
             </div>
           </div>
 
-          <label for="due_date">When should this bug be fixed by?</label><br>
+          <label for="due_date">When should this bug be fixed by? (Enter in the form: mm/dd/yyyy)</label><br>
           <div class="date-container">
             <input type="string" id="month" name="month">
             <p class="slash">/</p>

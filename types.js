@@ -38,6 +38,7 @@ const bugResponse = {
     bugType: BugType.TOOLKIT || BugType.TOOL,
     bugLocation: '', // string
     bugMedia: null, // any type, initially set to null
+    bugGoogleDrive: '', //string, serves as an alt to bug media
     bugDesc: '', // string
     priority: Priority.NA,
     targetDate: new Date(), // Date

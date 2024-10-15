@@ -113,8 +113,11 @@ nav {
 #name, #email, #module, #bugType {
   width: 50%;
   border-radius: 5px;
+  border: solid black;
   padding: 5px 5px;
   margin-bottom: 15px;
+  border-width: 2px;
+  font-size: 1rem;
 }
 
 #module-team {
@@ -148,8 +151,28 @@ nav {
   flex-direction: column;
 }
 
+#file-upload-ins {
+  margin-top: 30px;
+}
+
+.alt {
+  margin: 0;
+}
+
+#bugGoogleDrive {
+  width: 50%;
+  margin-top: 0;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  padding: 5px 5px;
+  font-size: 1rem;
+}
+
 #description, #bugLocation{
   height: 160px;
+  border: solid black;
+  border-width: 2px;
+  font-size: 1rem;
 }
 
 #description label {
