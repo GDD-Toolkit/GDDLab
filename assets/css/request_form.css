@@ -1,4 +1,4 @@
-/*Style for bugForm.ejs*/
+/* Global CSS stuff */
 @import url('https://fonts.googleapis.com/css2?family=Eczar:wght@400..800&display=swap');
 
 :root {
@@ -69,6 +69,12 @@ nav {
   font-weight: 500;
 }
 
+body {
+  font-family: 'Eczar', serif;
+  background-color: #f4f2dc;
+  padding: 20px;
+}
+
 .form-container {
   width: 60%;
   margin-top: 30px;
@@ -82,8 +88,7 @@ nav {
   background-color: #f9f9f9;
 }
 
-
-#header{
+#header {
   margin: auto;
   font-size: 2.5em;
   display: flex;
@@ -92,25 +97,33 @@ nav {
 }
 
 #header-description{
- padding-left: 10px;
- padding-right: 10px;
- margin: 0;
- padding-bottom: 10px;
-}
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0;
+  padding-bottom: 10px;
+ }
+
+#header-description{
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0;
+  padding-bottom: 10px;
+ }
+
 
 .form-subcontainer {
   padding-left: 15px;
   padding-right: 15px;
 }
 
-#contact-info, #bug-info{
+#contact-info, #asset-info{
   color: var(--med-green);
   font-size: 1.4em;
   margin: 0;
   font-weight: 500;
 }
 
-#name, #email, #module, #bugType {
+#name, #email, #module, #assetType, #assetTitle {
   width: 50%;
   border-radius: 5px;
   border: solid black;
@@ -126,33 +139,37 @@ nav {
   margin-bottom: 15px;
 }
 
-.bug-type-container {
+#content-related-container{
   display: flex;
   flex-direction: column;
   width: 95%;
+  height: 40%;
+  border-radius: 5px;
   margin-bottom: 15px;
-}
+  margin-top: 15px;
+ }
 
-#bugType {
-  width: 20%;
-}
+ #assetLocation, #description {
+  border-radius: 5px;
+  padding: 5px 5px;
+  border: solid black;
+  border-width: 2px;
+ }
 
-#bugLocation, #desc-container{
- display: flex;
- flex-direction: column;
- width: 95%;
- height: 40%;
- border-radius: 5px;
- padding: 5px 5px;
-}
+ .asset-title-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+ }
 
-#file-upload {
+
+ #file-upload-container {
   display: flex;
   flex-direction: column;
 }
 
 #file-upload-ins {
-  margin-top: 30px;
+  margin-top: 15px;
 }
 
 .alt {
@@ -162,23 +179,20 @@ nav {
 #bugGoogleDrive {
   width: 50%;
   margin-top: 0;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
   border-radius: 5px;
   padding: 5px 5px;
   font-size: 1rem;
 }
 
-#description, #bugLocation{
-  height: 160px;
-  border: solid black;
-  border-width: 2px;
+.asset-desc-container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
   font-size: 1rem;
+  margin-bottom: 30px;
 }
 
-#description label {
-  margin-bottom: 15px;
-  margin-top: 15px;
-}
 
 #priority-container {
   display: flex;
@@ -242,9 +256,9 @@ nav {
   border-radius: 50px;
   border-width: 0;
   font-weight: bold;
-  margin-top: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
   width: 200px;
   height: 50px;
   font-size: 1.5em;
@@ -253,4 +267,8 @@ nav {
 #file-upload {
   margin-bottom: 15px;
   margin-top: 15px;
+}
+
+.required {
+  color: red;
 }

@@ -1,5 +1,5 @@
 /* -- BACKEND SET UP -- */
-const portNumber = 5000;
+const portNumber = 8000;
 const path = require("path");
 const express = require("express");
 const multer = require('multer');

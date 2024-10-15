@@ -5,10 +5,128 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GDDLab</title>
-
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/request_form.css" />
   </head>
   <body>
-    <%- include('navbar') %>
-  </body>
-</html>
+    <%-include('navbar')%>
+    
+        <form action="/submit" method="POST" enctype="multipart/form-data" class="form-container">
+          <h1 id="header">REQUEST FORM</h1>
+          <p id="header-description">
+            This form is the first process in implementing/adding the requested feature or content. Once submitted, the form will be handed to Human-Centered Design who will contact the POC for feedback and approval. Finally, the design will be handed to Infrastructure and Interface for implementation.
+          </p>
+          <!-- Contact Information title  -->
+          <h3 id="contact-info">Contact Information</h3>
+    
+          <div class="form-subcontainer">
+            <div class="name-container">
+              <label for="name">Name <span style="color:red">*</span></label><br>
+              <input type="text" id="name" name="name" required><br>
+            </div>
+  
+            <div class="email-container">
+              <label for="email">Email <span style="color:red">*</span></label><br>
+              <input type="email" id="email" name="email" required><br>
+            </div>
+  
+            <div id="module-team">
+              <label for="module">Module Team <span style="color:red">*</span></label>
+              <select id="module" name="moduleTeam" required>
+                <option value="">Select your module team</option>
+                <option value="training">Training and Knowledge Development</option>
+                <option value="public">Public Policy</option>
+                <option value="project plan">Project Planning</option>
+                <option value="project eval">Project Evaluation</option>
+                <option value="operational">Operational Protocols</option>
+                <option value="infrastructure">Infrastructure and Interface</option>
+                <option value="human-centered">Human-Centered Design</option>
+                <option value="dev ethics">Development Ethics</option>
+              </select>
+            </div>
+          </div>
+    
+          <!-- Asset Information -->
+          <h3 id="asset-info">Asset Information</h3>
+          <div class="form-subcontainer">
+            <div class="asset-type-container">
+              <label for="assetType">
+                Please indicate the type of asset.<span class="required">*</span>
+                <br>
+                There are two choices: Content and Feature. Content is a body of information to be migrated in the toolkit or in an affiliated, pre-existing tool. Feature is a tool that does not yet exist anywhere. 
+              </label>
+              <select id="assetType" name="assetType" required>
+                <option value="">Select type of asset</option>
+                <option value="content">Content</option>
+                <option value="feature">Feature</option>
+              </select>
+            </div>
+    
+          <!-- New Content-related Question -->
+          <div id="content-related-container">
+            <label for="assetLocation">If this is content-related, what page and/or where in the page specifically should the asset be?<span class="required">*</span></label>
+            <textarea id="assetLocation" name="assetLocation" rows="2"></textarea>
+          </div>
+    
+          <!-- New Title of Asset Question -->
+          <div class="asset-title-container">
+            <label for="asset-title">What is the title of the asset? <span class="required">*</span></label>
+            <input type="text" id="assetTitle" name="assetTitle" required>
+          </div>
+    
+          <!-- Updated Attach File -->
+          <div id="file-upload-container">
+            <label for="file_upload" id="file-upload-ins">Please attach a video or image of the bug or if you have multiple files, please put them in a google folder and paste the link below.
+              <span style="color:red"></span>
+            </label>
+            <p class="alt">Attach the video or image here: </p>
+            <input type="file" id="bugMedia" name="bugMedia">
+            <p class="alt">Or link a google folder: </p>
+            <input type="text" id="bugGoogleDrive" name="bugGoogleDrive" />
+          </div>
+    
+          <div class="asset-desc-container">
+            <label for="asset-desc">Please provide a detailed description of the purpose of the asset, what it encases, and (if applicable) how it is supposed to function. <span class="required">*</span></label>
+            <textarea id="description" name="assetDesc" rows="5" required></textarea>
+          </div>
+    
+          <!-- Priority -->
+          <label for="priority">Select the level of priority <span style="color:red">*</span></label>
+          <div id="priority-container">
+            <div>
+              <input type="radio" id="high" name="priority" value="High">
+              <label for="high">High</label>
+              <p>Get this done ASAP</p>
+            </div>
+            <div>
+              <input type="radio" id="medium" name="priority" value="Medium">
+              <label for="medium">Medium</label>
+              <p>Not sure</p>
+            </div>
+            <div>
+              <input type="radio" id="low" name="priority" value="Low">
+              <label for="low">Low</label>
+              <p>When possible</p>
+            </div>
+          </div>
+
+          <label for="due_date">When should this asset be implemented by? (Enter in the form: mm/dd/yyyy)</label><br>
+          <div class="date-container">
+            <input type="string" id="month" name="month">
+            <p class="slash">/</p>
+            <input type="string" id="day" name="day">
+            <p class="slash">/</p>
+            <input type="string" id="year" name="year">
+          </div>
+        </div>
+
+  
+          <!-- Buttons -->
+          <div id="buttons">
+            <input class="button" id="clear" type="reset" value="Clear">
+            <input class="button" id="submit" type="submit">
+          </div>  
+        </form>
+      
+      <script src="script.js"></script>
+    </body>
+    </html>
