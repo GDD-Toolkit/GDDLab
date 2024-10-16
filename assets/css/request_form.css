@@ -1,0 +1,274 @@
+/* Global CSS stuff */
+@import url('https://fonts.googleapis.com/css2?family=Eczar:wght@400..800&display=swap');
+
+:root {
+  --dark-green: #3e5b5b;
+  --med-green: #578574;
+  --light-green: #8ab380;
+  --yellow-green: #d8df81;
+  --beige: #f4f2dc;
+  --white: #fafafa;
+  --red: #CF0303;
+  --black: #1E1E1E;
+}
+
+* {
+  font-family: 'Eczar', sans-serif;
+}
+
+.GDDLabHeader {
+  color: var(--dark-green);
+  font-size: 3em;
+  margin: 0;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--beige);
+  border-radius: 50px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  box-shadow: 10px 10px 9px -1px rgba(0,0,0,0.3);
+}
+
+.defNav {
+  font-family: 'Ezcar', serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: var(--dark-green);
+  background-color: transparent;
+  width: fit-content;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-family: 'Eczar', sans-serif;
+}
+
+.active {
+  font-size: 1.5rem;
+  background-color: var(--dark-green);
+  color: var(--white);
+  text-decoration: none;
+  width: fit-content;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 50px;
+  font-family: 'Eczar', sans-serif;
+  font-weight: 500;
+}
+
+body {
+  font-family: 'Eczar', serif;
+  background-color: #f4f2dc;
+  padding: 20px;
+}
+
+.form-container {
+  width: 60%;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 40px;
+  box-shadow: 10px 10px 9px -1px rgba(0,0,0,0.3);
+  border-radius: 30px;
+  background-color: #f9f9f9;
+}
+
+#header {
+  margin: auto;
+  font-size: 2.5em;
+  display: flex;
+  justify-content: center;
+  color: var(--dark-green);
+}
+
+#header-description{
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0;
+  padding-bottom: 10px;
+ }
+
+#header-description{
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0;
+  padding-bottom: 10px;
+ }
+
+
+.form-subcontainer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+#contact-info, #asset-info{
+  color: var(--med-green);
+  font-size: 1.4em;
+  margin: 0;
+  font-weight: 500;
+}
+
+#name, #email, #module, #assetType, #assetTitle {
+  width: 50%;
+  border-radius: 5px;
+  border: solid black;
+  padding: 5px 5px;
+  margin-bottom: 15px;
+  border-width: 2px;
+  font-size: 1rem;
+}
+
+#module-team {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+#content-related-container{
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  height: 40%;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+ }
+
+ #assetLocation, #description {
+  border-radius: 5px;
+  padding: 5px 5px;
+  border: solid black;
+  border-width: 2px;
+ }
+
+ .asset-title-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+ }
+
+
+ #file-upload-container {
+  display: flex;
+  flex-direction: column;
+}
+
+#file-upload-ins {
+  margin-top: 15px;
+}
+
+.alt {
+  margin: 0;
+}
+
+#bugGoogleDrive {
+  width: 50%;
+  margin-top: 0;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  padding: 5px 5px;
+  font-size: 1rem;
+}
+
+.asset-desc-container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+
+#priority-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  width: 95%;
+}
+
+#priority-container div {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+#priority-container div label {
+  font-weight: bold;
+}
+
+#priority-container div p {
+ padding: 0;
+ margin-top: 0;
+}
+
+.date-container {
+  display: flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+  width: 50%;
+  justify-content: space-between;
+}
+
+.date-container input {
+  border-radius: 5px;
+  height: 20px;
+  width: 100px;
+  padding: 5px 5px;
+  margin: 0;
+  align-self: center;
+}
+
+.slash {
+  font-weight: 300;
+  font-size: 2rem;
+  margin: 0;
+}
+
+#buttons{
+  display: flex;
+  justify-content: center;
+}
+
+#clear{
+  background-color: var(--yellow-green);
+}
+
+#submit{
+  background-color: var(--light-green);
+}
+
+.button{
+  border-radius: 50px;
+  border-width: 0;
+  font-weight: bold;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+  width: 200px;
+  height: 50px;
+  font-size: 1.5em;
+}
+
+#file-upload {
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.required {
+  color: red;
+}
