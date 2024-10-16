@@ -1,21 +1,21 @@
 // ENUMS
-const AssetType = {
+const AssetType = Object.freeze({
     NA: 'NA',
     CONTENT: 'CONTENT',
     FEATURE: 'FEATURE',
-};
+});
 
-const Priority = { 
+const Priority = Object.freeze({ 
      NA: 'NA',
      LOW: 'LOW',
      MEDIUM: 'MEDIUM',
      HIGH: 'HIGH'
-}
+});
 
-const BugType = {
+const BugType = Object.freeze({
 	TOOLKIT: 'TOOLKIT',
 	TOOL: 'TOOL'
-}
+});
 
 // Structure of responses
 const requestResponse = {
@@ -26,6 +26,7 @@ const requestResponse = {
     assetLocation: '', // string
     assetTitle: '', // string
     assetMedia: null, // any type, initially set to null
+    assetGoogleDrive: '',
     assetDesc: '', // string
     priority: Priority.NA,
     targetDate: new Date(), // Date

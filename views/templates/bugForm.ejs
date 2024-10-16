@@ -37,15 +37,15 @@
           <div id="module-team">
             <label for="module">Module Team <span style="color:red">*</span></label>
             <select id="module" name="moduleTeam" required>
-              <option value="">Select your module team</option>
-              <option value="training">Training and Knowledge Development</option>
-              <option value="public">Public Policy</option>
-              <option value="project plan">Project Planning</option>
-              <option value="project eval">Project Evaluation</option>
-              <option value="operational">Operational Protocols</option>
-              <option value="infrastructure">Infrastructure and Interface</option>
-              <option value="human-centered">Human-Centered Design</option>
-              <option value="dev ethics">Development Ethics</option>
+              <option disabled selected value="">Select your module team</option>
+              <option value="training and knowledge development">Training and Knowledge Development</option>
+              <option value="public policy">Public Policy</option>
+              <option value="project planning">Project Planning</option>
+              <option value="project evaluation">Project Evaluation</option>
+              <option value="operational protocols">Operational Protocols</option>
+              <option value="infrastructure and interface">Infrastructure and Interface</option>
+              <option value="human-centered design">Human-Centered Design</option>
+              <option value="development ethics">Development Ethics</option>
             </select>
           </div>
         </div>
@@ -58,6 +58,7 @@
               Please indicate whether the bug is occurring in the toolkit or in a certain GDD-affiliated tool.
             </label>
             <select id="bugType" name="bugType" required>
+              <option value='' disabled selected>Indicate the location of the bug</option>
               <option value="TOOLKIT">Toolkit</option>
               <option value="TOOL">Tool</option>
             </select>
@@ -82,18 +83,18 @@
             <input type="text" id="bugGoogleDrive" name="bugGoogleDrive" />
           </div>
 
-          <div id="desc-container">
-            <label for="description">Please provide a <b>detailed</b> description of
-              the bug such as events that lead to the bug occurring, the expected
-              outcome after the events, and the actual outcome (the bug).
-              <span style="color:red">*</span></label>
-            <textarea id="description" name="bugDesc" required></textarea><br>
-          </div>
+          <label for="description">Please provide a <b>detailed</b> description of
+            the bug such as events that lead to the bug occurring, the expected
+            outcome after the events, and the actual outcome (the bug).
+            <span style="color:red">*</span></label>
+            <br>
+          <textarea id="description" name="bugDesc" required></textarea><br>
+        
 
           <label for="priority">Select the level of priority <span style="color:red">*</span></label>
           <div id="priority-container">
             <div>
-              <input type="radio" id="high" name="priority" value="High">
+              <input type="radio" id="high" name="priority" value="High" required>
               <label for="high">High</label>
               <p>Get this done ASAP</p>
             </div>
@@ -111,11 +112,11 @@
 
           <label for="due_date">When should this bug be fixed by? (Enter in the form: mm/dd/yyyy)</label><br>
           <div class="date-container">
-            <input type="string" id="month" name="month">
+            <input type="string" id="month" name="month" required>
             <p class="slash">/</p>
-            <input type="string" id="day" name="day">
+            <input type="string" id="day" name="day" required>
             <p class="slash">/</p>
-            <input type="string" id="year" name="year">
+            <input type="string" id="year" name="year" required>
           </div>
         </div>
 

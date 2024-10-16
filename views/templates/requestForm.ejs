@@ -32,15 +32,15 @@
             <div id="module-team">
               <label for="module">Module Team <span style="color:red">*</span></label>
               <select id="module" name="moduleTeam" required>
-                <option value="">Select your module team</option>
-                <option value="training">Training and Knowledge Development</option>
-                <option value="public">Public Policy</option>
+                <option value="" selected disabled>Select your module team</option>
+                <option value="training and knowledge development">Training and Knowledge Development</option>
+                <option value="public policy">Public Policy</option>
                 <option value="project plan">Project Planning</option>
-                <option value="project eval">Project Evaluation</option>
-                <option value="operational">Operational Protocols</option>
-                <option value="infrastructure">Infrastructure and Interface</option>
-                <option value="human-centered">Human-Centered Design</option>
-                <option value="dev ethics">Development Ethics</option>
+                <option value="project evaluation">Project Evaluation</option>
+                <option value="operational protocols">Operational Protocols</option>
+                <option value="infrastructure and interface">Infrastructure and Interface</option>
+                <option value="human-centered design">Human-Centered Design</option>
+                <option value="development ethics">Development Ethics</option>
               </select>
             </div>
           </div>
@@ -55,7 +55,7 @@
                 There are two choices: Content and Feature. Content is a body of information to be migrated in the toolkit or in an affiliated, pre-existing tool. Feature is a tool that does not yet exist anywhere. 
               </label>
               <select id="assetType" name="assetType" required>
-                <option value="">Select type of asset</option>
+                <option value="" selected disabled>Select type of asset</option>
                 <option value="content">Content</option>
                 <option value="feature">Feature</option>
               </select>
@@ -63,7 +63,7 @@
     
           <!-- New Content-related Question -->
           <div id="content-related-container">
-            <label for="assetLocation">If this is content-related, what page and/or where in the page specifically should the asset be?<span class="required">*</span></label>
+            <label for="assetLocation">If this is content-related, what page and/or where in the page specifically should the asset be?</label>
             <textarea id="assetLocation" name="assetLocation" rows="2"></textarea>
           </div>
     
@@ -79,9 +79,9 @@
               <span style="color:red"></span>
             </label>
             <p class="alt">Attach the video or image here: </p>
-            <input type="file" id="bugMedia" name="bugMedia">
+            <input type="file" id="assetMedia" name="assetMedia">
             <p class="alt">Or link a google folder: </p>
-            <input type="text" id="bugGoogleDrive" name="bugGoogleDrive" />
+            <input type="text" id="assetGoogleDrive" name="assetGoogleDrive" />
           </div>
     
           <div class="asset-desc-container">
@@ -93,7 +93,7 @@
           <label for="priority">Select the level of priority <span style="color:red">*</span></label>
           <div id="priority-container">
             <div>
-              <input type="radio" id="high" name="priority" value="High">
+              <input type="radio" id="high" name="priority" value="High" required>
               <label for="high">High</label>
               <p>Get this done ASAP</p>
             </div>
@@ -111,11 +111,11 @@
 
           <label for="due_date">When should this asset be implemented by? (Enter in the form: mm/dd/yyyy)</label><br>
           <div class="date-container">
-            <input type="string" id="month" name="month">
+            <input type="string" id="month" name="month" required>
             <p class="slash">/</p>
-            <input type="string" id="day" name="day">
+            <input type="string" id="day" name="day" required>
             <p class="slash">/</p>
-            <input type="string" id="year" name="year">
+            <input type="string" id="year" name="year" required>
           </div>
         </div>
 

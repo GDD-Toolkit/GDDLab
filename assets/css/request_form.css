@@ -176,7 +176,7 @@ body {
   margin: 0;
 }
 
-#bugGoogleDrive {
+#assetGoogleDrive {
   width: 50%;
   margin-top: 0;
   margin-bottom: 30px;
@@ -193,6 +193,9 @@ body {
   margin-bottom: 30px;
 }
 
+#description, #assetGoogleDrive, #assetLocation {
+  font-size: 1rem;
+}
 
 #priority-container {
   display: flex;
@@ -231,6 +234,7 @@ body {
   padding: 5px 5px;
   margin: 0;
   align-self: center;
+  font-size: 1rem;
 }
 
 .slash {
