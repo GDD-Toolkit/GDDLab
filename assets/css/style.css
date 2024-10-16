@@ -1,19 +1,31 @@
 /* Global CSS stuff */
 @import url('https://fonts.googleapis.com/css2?family=Eczar:wght@400..800&display=swap');
-
 :root {
   --dark-green: #3e5b5b;
   --med-green: #578574;
   --light-green: #8ab380;
   --yellow-green: #d8df81;
-  --beige: #f4f2dc;
+  --beige: #EFECCB;
   --white: #fafafa;
   --red: #CF0303;
   --black: #1E1E1E;
 }
 
-html {
+* {
   font-family: 'Eczar', sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  transform: scale(8);
 }
 
 .GDDLabHeader {
@@ -25,8 +37,10 @@ html {
 
 nav {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
-  width: 70%;
+  width: 75%;
   margin-left: auto;
   margin-right: auto;
   background-color: var(--beige);
@@ -68,4 +82,56 @@ nav {
   font-family: 'Eczar', sans-serif;
   font-weight: 500;
 }
+/* -- do not copy from here */
 
+#container-title {
+  color: var(--dark-green);
+  font-size: 3rem;
+  margin: 0;
+  text-align: center;
+}
+
+.team-container {
+  background-color: white;
+  border-radius: 30px;
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  box-sizing: content-box;
+  box-shadow: 10px 10px 9px -1px rgba(0,0,0,0.3);
+  padding-bottom: 1%;
+}
+
+.team-subcontainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between; /* change? */
+  box-sizing: content-box;
+}
+
+.team {
+  display: flex;
+  flex: 1 0 21%;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.team-container .icon {
+  width: 225px;
+  height: 225px;
+  border-radius: 50%;
+}
+
+.team-name {
+  margin-top: 0px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.5rem;
+  width: 75%;
+}

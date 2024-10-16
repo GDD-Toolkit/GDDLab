@@ -8,8 +8,11 @@
     <link rel="stylesheet" href="css/request_form.css" />
   </head>
   <body>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 320">
+      <path fill="#f4f2dc" width="200px" fill-opacity="1" d="M0,288L40,288C80,288,160,288,240,277.3C320,267,400,245,480,224C560,203,640,181,720,186.7C800,192,880,224,960,224C1040,224,1120,192,1200,197.3C1280,203,1360,245,1400,266.7L1440,288L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z">
+      </path>
+    </svg>
     <%-include('navbar')%>
-    
         <form action="/submit" method="POST" enctype="multipart/form-data" class="form-container">
           <h1 id="header">REQUEST FORM</h1>
           <p id="header-description">
@@ -126,7 +129,5 @@
             <input class="button" id="submit" type="submit">
           </div>  
         </form>
-      
-      <script src="script.js"></script>
     </body>
     </html>

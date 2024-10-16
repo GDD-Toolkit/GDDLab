@@ -6,7 +6,7 @@
   --med-green: #578574;
   --light-green: #8ab380;
   --yellow-green: #d8df81;
-  --beige: #f4f2dc;
+  --beige: #EFECCB;
   --white: #fafafa;
   --red: #CF0303;
   --black: #1E1E1E;
@@ -14,6 +14,19 @@
 
 * {
   font-family: 'Eczar', sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  transform: scale(8);
 }
 
 .GDDLabHeader {
@@ -25,8 +38,10 @@
 
 nav {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
-  width: 70%;
+  width: 75%;
   margin-left: auto;
   margin-right: auto;
   background-color: var(--beige);
@@ -71,8 +86,6 @@ nav {
 
 body {
   font-family: 'Eczar', serif;
-  background-color: #f4f2dc;
-  padding: 20px;
 }
 
 .form-container {
