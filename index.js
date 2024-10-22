@@ -47,19 +47,8 @@ app.get("/confirmation-page", (request, response) => {
 });
 
 /* -- BACKEND STUFF FOR PAGES -- */
-const storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-      cb(null, 'uploads/'); // Directory where files will be stored
-    },
-    filename: function (req, file, cb) {
-      cb(null, Date.now() + '-' + file.originalname); // Rename file to avoid conflicts
-    }
-  });
-  
-const upload = multer({ storage: storage });
-
 //Request Form Backend
-app.post("/confirmation-page", upload.single('assetMedia'), async (request, response) => {
+app.post("/confirmation-page", async (request, response) => {
     const name = request.body.name;
     const email = request.body.email;
     const moduleTeam = request.body.moduleTeam;
@@ -81,7 +70,6 @@ app.post("/confirmation-page", upload.single('assetMedia'), async (request, resp
             assetType: assetType,
             assetLocation: assetLocation,
             assetTitle: assetTitle,
-            assetMedia: request.file ? request.file.path : null,
             assetGoogleDrive: assetGoogleDrive,
             assetDesc: assetDesc,
             priority: priority,
@@ -97,7 +85,7 @@ app.post("/confirmation-page", upload.single('assetMedia'), async (request, resp
     }
     });
 
-app.post("/confirmation-page", upload.single('bugMedia'), async (req, res) => {
+app.post("/confirmation-page", async (req, res) => {
     try {
       await client.connect();
       // Grab form data
@@ -110,7 +98,6 @@ app.post("/confirmation-page", upload.single('bugMedia'), async (req, res) => {
         moduleTeam: moduleTeam || '',
         bugType: bugType === 'TOOL' ? BugType.TOOL : BugType.TOOLKIT,
         bugLocation: bugLocation || '',
-        bugMedia: req.file ? req.file.path : null, // Store file path
         bugGoogleDrive: bugGoogleDrive || '',
         bugDesc: bugDesc || '',
         priority: priority || Priority.NA,

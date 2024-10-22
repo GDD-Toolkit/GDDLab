@@ -17,7 +17,7 @@
     </svg>
     <section>
       <%- include('navbar') %>
-      <form action="/submitBug" method="POST" enctype="multipart/form-data" class="form-container">
+      <form action="/confirmation-page" method="POST" class="form-container">
         <h1 id="header">BUG FORM</h1>
 
         <p id="header-description">This form is the first process in
@@ -53,7 +53,6 @@
           </div>
         </div>
 
-
         <h3 id="bug-info">Bug Information</h3>
         <div class="form-subcontainer">
           <div class="bug-type-container">
@@ -76,14 +75,11 @@
           </div>
 
           <div id="file-upload">
-            <label for="file_upload" id="file-upload-ins">Please attach a video or image of the bug or if you have multiple files, please put them in a google folder and paste the link below.
+            <label for="file_upload" id="file-upload-ins">Please put your document(s) of the bug in a google folder and paste the link below.
               <span style="color:red"></span>
             </label>
-            <p class="alt">Attach the video or image here: </p>
-            <input type="file" id="bugMedia" name="bugMedia">
-            <br>
-            <p class="alt">Or attach a google folder: </p>
-            <input type="text" id="bugGoogleDrive" name="bugGoogleDrive" />
+            <p class="alt">Attach the link to the google folder: </p>
+            <input type="text" id="bugGoogleDrive" name="bugGoogleDrive" required/>
           </div>
 
           <label for="description">Please provide a <b>detailed</b> description of

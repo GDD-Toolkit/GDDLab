@@ -13,7 +13,7 @@
       </path>
     </svg>
     <%-include('navbar')%>
-        <form action="/submit" method="POST" enctype="multipart/form-data" class="form-container">
+        <form action="/confirmation-page" method="POST" class="form-container">
           <h1 id="header">REQUEST FORM</h1>
           <p id="header-description">
             This form is the first process in implementing/adding the requested feature or content. Once submitted, the form will be handed to Human-Centered Design who will contact the POC for feedback and approval. Finally, the design will be handed to Infrastructure and Interface for implementation.
@@ -78,13 +78,11 @@
     
           <!-- Updated Attach File -->
           <div id="file-upload-container">
-            <label for="file_upload" id="file-upload-ins">Please attach a video or image of the bug or if you have multiple files, please put them in a google folder and paste the link below.
+            <label for="file_upload" id="file-upload-ins">Please put your document(s) of the asset in a google folder and paste the link below.
               <span style="color:red"></span>
             </label>
-            <p class="alt">Attach the video or image here: </p>
-            <input type="file" id="assetMedia" name="assetMedia">
-            <p class="alt">Or link a google folder: </p>
-            <input type="text" id="assetGoogleDrive" name="assetGoogleDrive" />
+            <p class="alt">Attach the link to the google folder: </p>
+            <input type="text" id="assetGoogleDrive" name="assetGoogleDrive" required/>
           </div>
     
           <div class="asset-desc-container">
