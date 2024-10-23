@@ -30,6 +30,10 @@ app.get("/", (request, response) => {
     response.render("index", { activeTab: 'home' });
 });
 
+app.get("/about-page", (request, response) => {
+  response.render("About", {activeTab: 'home'});
+})
+
 app.get("/requestForm", (request, response) => {
     response.render("requestForm", { activeTab: 'requestform' });
 });
