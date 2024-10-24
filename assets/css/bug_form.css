@@ -72,6 +72,10 @@ nav {
   font-family: 'Eczar', sans-serif;
 }
 
+.defNav:hover {
+  font-weight: bold;
+}
+
 .active {
   font-size: 1.5rem;
   background-color: var(--dark-green);
@@ -274,4 +278,16 @@ nav {
 #file-upload {
   margin-bottom: 15px;
   margin-top: 15px;
+}
+
+#low-label {
+  color: var(--med-green);
+}
+
+#med-label {
+  color: orange;
+}
+
+#high-label {
+  color: var(--red);
 }

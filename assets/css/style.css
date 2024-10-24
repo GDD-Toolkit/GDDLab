@@ -71,6 +71,10 @@ nav {
   font-family: 'Eczar', sans-serif;
 }
 
+.defNav:hover {
+  font-weight: bold;
+}
+
 .active {
   font-size: 1.5rem;
   background-color: var(--dark-green);
@@ -137,4 +141,11 @@ nav {
   font-weight: 500;
   font-size: 1.5rem;
   width: 75%;
+  text-decoration: none;
+  color: var(--black);
+}
+
+.team-name:hover {
+  color: var(--dark-green);
+  font-weight: bold;
 }

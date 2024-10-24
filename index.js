@@ -2,9 +2,9 @@
 const portNumber = 8000;
 const path = require("path");
 const express = require("express");
-const multer = require('multer');
 const { MongoClient, ServerApiVersion } = require("mongodb");
 const { AssetType, Priority, BugType, bugResponse, requestResponse } = require('./types');
+const fs = require("fs"); //for reading files
 
 const app = express();
 app.set("views", path.resolve(__dirname, "views/templates"));
@@ -26,10 +26,30 @@ const bugResponses = database.collection(process.env.MONGO_BUG_COLLECTION);
 const requestResponses = database.collection(process.env.MONGO_REQUEST_COLLECTION);
 
 /* -- DISPLAYING PAGES -- */
+//home page
 app.get("/", (request, response) => {
     response.render("index", { activeTab: 'home' });
 });
 
+//module pages
+app.get("/infrastructure-and-interface", (request, response) => {
+  const filePath = path.join(__dirname, "assets/moduleGroupList");
+  const moduleGroupPath = path.join(filePath, 'infrastructure.txt');
+  const fileContent = fs.readFileSync(moduleGroupPath, "utf-8");
+
+  const lines = fileContent.split("\n").map(line => line.trim());
+
+  // Extract the meeting time (first line) and team members (remaining lines)
+  const meetingTime = lines[0]; // "Mondays at 2:30 pm to 3:30 pm"
+  const teamMembers = lines.slice(1); // Array of team members
+
+  response.render("module-pages/infrastructure", {
+    meetingTime: meetingTime,
+    teamMembers: teamMembers,
+  });
+})
+
+// about pages
 app.get("/about-page", (request, response) => {
   response.render("About", {activeTab: 'about', activeFooterTab: 'About'});
 })
@@ -38,6 +58,7 @@ app.get("/2023-cohort", (request, response) => {
   response.render("cohort-pages/2023cohort", {activeTab: 'home', activeFooterTab: '2023'});
 })
 
+//form pages
 app.get("/requestForm", (request, response) => {
     response.render("requestForm", { activeTab: 'requestform' });
 });
@@ -46,10 +67,7 @@ app.get("/bugForm", (request, response) => {
     response.render("bugForm", { activeTab: 'bugform' });
 });
 
-app.get("/schedule", (request, response) => {
-    response.render("index", { activeTab: 'schedule' });
-});
-
+//confirmation page
 app.get("/confirmation-page", (request, response) => {
     response.render('confirmationPage');
 });

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>GDDLab - Infrastructure and Interface</title>
+        <link rel = "stylesheet" href = "/css/module.css" />
+    
+    </head>
+    <body>
+        <div class="top-headers">
+            <a href="/" class="back-link">HOME</a>
+            <h1 class="module-header">INFRASTRUCTURE AND INTERFACE</h1>
+        </div>
+        <div class="info-container">
+            <div class="left-container">
+                <h2 class="about">ABOUT THE TEAM</h2>
+                <p class="desc">
+                    The Infrastructure and Interface module group is a team that focuses on the technical aspects of toolkit migration and tool development.
+                    Some of the things this team has worked on is creating GDDLab, creating pages for the recently new GDD Toolkit website, and migrating toolkit content from other module groups.
+                </p>
+            </div>
+
+            <div class="right-container">
+                <h2 class="team-header">TEAM MEMBERS</h2>
+                <div class="name-list">
+                <% teamMembers.forEach(function(member) { %>
+                    <p class="memberName"><%= member %></p>
+                  <% }) %>
+                </div>
+            </div>
+        </div>
+        <hr class="split" />
+        <div class="meeting-time">
+            <p>
+                This team is meeting on: 
+            </p>
+            <p class="time"><%= meetingTime %></p>
+        </div>
+        <!-- Link expires in 7 days, this is just for demostration purposes -->
+        <iframe
+            src="https://on7kekm7exj5m0.embednotionpage.com/Tasks-Sprints-21cd10936b80486a9ded49034eef212c?pvs=4"
+            style="width: 100%; height: 1000px; border: none !important; padding: 0;"
+        ></iframe>
+    </body>
+</html>

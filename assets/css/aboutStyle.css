@@ -72,6 +72,10 @@ nav {
   font-family: 'Eczar', sans-serif;
 }
 
+.defNav:hover {
+  font-weight: bold;
+}
+
 .active {
   font-size: 1.5rem;
   background-color: var(--dark-green);
