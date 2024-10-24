@@ -149,3 +149,7 @@ nav {
   color: var(--dark-green);
   font-weight: bold;
 }
+
+.placeholder-confirm {
+  text-align: center;
+}

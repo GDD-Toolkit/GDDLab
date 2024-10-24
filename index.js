@@ -69,7 +69,7 @@ app.get("/bugForm", (request, response) => {
 
 //confirmation page
 app.get("/confirmation-page", (request, response) => {
-    response.render('confirmationPage');
+    response.render('confirmationPage', {activeTab: 'none'});
 });
 
 /* -- BACKEND STUFF FOR PAGES -- */
@@ -107,6 +107,7 @@ app.post("/confirmation-page", async (request, response) => {
     } catch(e){
         console.error(e);
     } finally {
+        response.redirect("/confirmation-page");
         await client.close();
     }
     });
@@ -140,6 +141,7 @@ app.post("/confirmation-page", async (req, res) => {
       console.error("Error submitting bug report:", error);
       res.status(500).send("Error submitting bug report.");
     } finally {
+      response.redirect("/confirmation-page");
       await client.close();
     }
   });
