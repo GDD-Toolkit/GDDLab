@@ -58,6 +58,10 @@ app.get("/2023-cohort", (request, response) => {
   response.render("cohort-pages/2023cohort", {activeTab: 'home', activeFooterTab: '2023'});
 })
 
+app.get("/2024-cohort", (request, response) => {
+  response.render("cohort-pages/2024cohort", {activeTab: 'home', activeFooterTab: '2024'});
+})
+
 //form pages
 app.get("/requestForm", (request, response) => {
     response.render("requestForm", { activeTab: 'requestform' });

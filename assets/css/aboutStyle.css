@@ -199,3 +199,8 @@ body {
 .unhighlight {
   opacity: .5;
 }
+
+.placeholder-about {
+  text-align: center;
+  margin-top: 30px;
+}
