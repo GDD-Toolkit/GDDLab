@@ -30,6 +30,14 @@ app.get("/", (request, response) => {
     response.render("index", { activeTab: 'home' });
 });
 
+app.get("/about-page", (request, response) => {
+  response.render("About", {activeTab: 'home', activeFooterTab: 'About'});
+})
+
+app.get("/2023-cohort", (request, response) => {
+  response.render("cohort-pages/2023cohort", {activeTab: 'home', activeFooterTab: '2023'});
+})
+
 app.get("/requestForm", (request, response) => {
     response.render("requestForm", { activeTab: 'requestform' });
 });
