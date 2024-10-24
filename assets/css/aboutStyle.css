@@ -13,6 +13,7 @@
 
 * {
   font-family: 'Eczar', sans-serif;
+  margin: 0;
 }
 
 body {
@@ -32,7 +33,10 @@ svg {
   color: var(--dark-green);
   font-size: 3em;
   margin: 0;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: 700;
 }
 
 nav {
@@ -108,19 +112,27 @@ body {
   padding: 0;
 }
 
-.about-section p {
+.class {
   margin: 20px 0;
   line-height: 1.6;
 }
 
-.about-section ul {
+.list {
   max-width: 100%;
   text-align: left;
   padding-left: 30px;
 }
 
-.about-section ul li {
+.list li {
   margin: 10px 0;
+}
+
+.header3 {
+  font-size: 2rem;
+  color: #3e5b5b;
+  text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
 .flex-container {
@@ -133,18 +145,39 @@ body {
 
 .cohort {
   text-align: center;
-  width: 200px;
+  width: auto;
 }
 
-footer {
-  background-color: #fafafa;
-  text-align: center;
+.cohort-image {
+  width: 500px;
+}
+
+.cohort-label {
+  font-size: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.footer {
   padding: 10px 0;
   position: relative;
   bottom: 0;
   width: 100%;
+  display: flex;
+  justify-content: space-around;
 }
 
-footer p {
-  margin: 0;
+.footer a {
+  text-decoration: none;
+  color: var(--black);
+  font-size: 2rem;
+}
+
+.activeFooterTab {
+  color: var(--dark-green) !important;
+  font-weight: bold;
+}
+
+.unhighlight {
+  opacity: .5;
 }

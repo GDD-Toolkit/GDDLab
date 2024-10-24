@@ -33,7 +33,10 @@ svg {
   color: var(--dark-green);
   font-size: 3em;
   margin: 0;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: 700;
 }
 
 nav {
