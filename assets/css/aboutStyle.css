@@ -187,7 +187,7 @@ body {
   font-size: 2rem;
 }
 
-.activeFooterTab {
+.activeFooterTab, .unhighlight:hover {
   color: var(--dark-green) !important;
   font-weight: bold;
 }

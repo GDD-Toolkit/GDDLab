@@ -31,7 +31,7 @@ app.get("/", (request, response) => {
 });
 
 app.get("/about-page", (request, response) => {
-  response.render("About", {activeTab: 'home', activeFooterTab: 'About'});
+  response.render("About", {activeTab: 'about', activeFooterTab: 'About'});
 })
 
 app.get("/2023-cohort", (request, response) => {
