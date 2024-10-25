@@ -42,8 +42,8 @@ app.get("/schedule", (request, response) => {
     response.render("index", { activeTab: 'schedule' });
 });
 
-app.get("/confirmation-page", (request, response) => {
-    response.render('confirmationPage');
+app.get("/confirmationPage", (request, response) => {
+    response.render('confirmationPage', { activeTab: 'none' });
 });
 
 /* -- BACKEND STUFF FOR PAGES -- */
@@ -59,7 +59,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 //Request Form Backend
-app.post("/confirmation-page", upload.single('assetMedia'), async (request, response) => {
+app.post("/confirmationPage", upload.single('assetMedia'), async (request, response) => {
     const name = request.body.name;
     const email = request.body.email;
     const moduleTeam = request.body.moduleTeam;
@@ -93,11 +93,12 @@ app.post("/confirmation-page", upload.single('assetMedia'), async (request, resp
     } catch(e){
         console.error(e);
     } finally {
-        await client.close();
+      response.redirect("/confirmationPage");
+      await client.close();
     }
     });
 
-app.post("/confirmation-page", upload.single('bugMedia'), async (req, res) => {
+app.post("/confirmationPage", upload.single('bugMedia'), async (req, res) => {
     try {
       await client.connect();
       // Grab form data
@@ -127,6 +128,7 @@ app.post("/confirmation-page", upload.single('bugMedia'), async (req, res) => {
       console.error("Error submitting bug report:", error);
       res.status(500).send("Error submitting bug report.");
     } finally {
+      res.redirect("/confirmationPage");
       await client.close();
     }
   });
