@@ -13,8 +13,10 @@
       </path>
     </svg>
     <%-include('navbar')%>
-        <form action="/submit" method="POST" enctype="multipart/form-data" class="form-container">
+        <form action="/confirmation-page" method="POST" class="form-container" name="requestForm">
           <h1 id="header">REQUEST FORM</h1>
+          <input type="hidden" name="formType" value="requestForm" />
+
           <p id="header-description">
             This form is the first process in implementing/adding the requested feature or content. Once submitted, the form will be handed to Human-Centered Design who will contact the POC for feedback and approval. Finally, the design will be handed to Infrastructure and Interface for implementation.
           </p>
@@ -78,13 +80,11 @@
     
           <!-- Updated Attach File -->
           <div id="file-upload-container">
-            <label for="file_upload" id="file-upload-ins">Please attach a video or image of the bug or if you have multiple files, please put them in a google folder and paste the link below.
+            <label for="file_upload" id="file-upload-ins">Please put your document(s) of the asset in a google folder and paste the link below.
               <span style="color:red"></span>
             </label>
-            <p class="alt">Attach the video or image here: </p>
-            <input type="file" id="assetMedia" name="assetMedia">
-            <p class="alt">Or link a google folder: </p>
-            <input type="text" id="assetGoogleDrive" name="assetGoogleDrive" />
+            <p class="alt">Attach the link to the google folder: </p>
+            <input type="text" id="assetGoogleDrive" name="assetGoogleDrive" required/>
           </div>
     
           <div class="asset-desc-container">
@@ -97,17 +97,17 @@
           <div id="priority-container">
             <div>
               <input type="radio" id="high" name="priority" value="High" required>
-              <label for="high">High</label>
+              <label for="high" id="high-label">High</label>
               <p>Get this done ASAP</p>
             </div>
             <div>
               <input type="radio" id="medium" name="priority" value="Medium">
-              <label for="medium">Medium</label>
+              <label for="medium" id="med-label">Medium</label>
               <p>Not sure</p>
             </div>
             <div>
               <input type="radio" id="low" name="priority" value="Low">
-              <label for="low">Low</label>
+              <label for="low" id="low-label">Low</label>
               <p>When possible</p>
             </div>
           </div>

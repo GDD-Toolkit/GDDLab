@@ -1,0 +1,112 @@
+/* Global CSS stuff */
+@import url('https://fonts.googleapis.com/css2?family=Eczar:wght@400..800&display=swap');
+:root {
+  --dark-green: #3e5b5b;
+  --med-green: #578574;
+  --light-green: #8ab380;
+  --yellow-green: #d8df81;
+  --beige: #EFECCB;
+  --white: #fafafa;
+  --red: #CF0303;
+  --black: #1E1E1E;
+}
+
+* {
+  font-family: 'Eczar', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.top-headers {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    box-sizing: content;
+    color: var(--dark-green);
+    margin-bottom: 20px;
+}
+
+.back-link {
+    width: 100px;
+    text-align: center;
+    color: var(--dark-green);
+}
+
+.back-link:hover {
+    font-weight: bold;
+}
+
+.module-header {
+    width: calc(100% - 200px);
+    text-align: center;
+}
+
+.info-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 2rem;
+}
+
+.left-container {
+    width: 50%;
+}
+
+.left-container .about {
+    background-color: var(--light-green);
+    margin-bottom: 10px;
+    color: var(--dark-green);
+    padding-left: 15px; /*same distance as .desc padding + border-width*/
+}
+
+.left-container .desc {
+    border-left: solid var(--light-green);
+    padding-left: 10px;
+    border-width: 5px;
+}
+
+.right-container {
+    width: 50%;
+    justify-items: end;
+}
+
+.team-header {
+    background-color: var(--light-green);
+    margin-bottom: 10px;
+    color: var(--dark-green);
+    padding-right: 15px;
+    padding-left: 50px;
+}
+
+.right-container .name-list{
+    border-right: solid var(--light-green);
+    text-align: end;
+    padding-right: 10px;
+    border-width: 5px;
+    color: var(--med-green);
+}
+
+.split {
+    width: 75%;
+    margin-right: auto;
+    margin-left: auto;
+    border-width: 1px !important;
+    border: solid var(--light-green);
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.meeting-time {
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.time {
+    margin-left: 10px;
+    font-weight: bold;
+}

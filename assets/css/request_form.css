@@ -33,7 +33,10 @@ svg {
   color: var(--dark-green);
   font-size: 3em;
   margin: 0;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: 700;
 }
 
 nav {
@@ -67,6 +70,10 @@ nav {
   border-radius: 50px;
   text-decoration: none;
   font-family: 'Eczar', sans-serif;
+}
+
+.defNav:hover {
+  font-weight: bold;
 }
 
 .active {
@@ -288,4 +295,16 @@ body {
 
 .required {
   color: red;
+}
+
+#low-label {
+  color: var(--med-green);
+}
+
+#med-label {
+  color: orange;
+}
+
+#high-label {
+  color: var(--red);
 }

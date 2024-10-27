@@ -1,5 +1,5 @@
-/* Global CSS stuff */
 @import url('https://fonts.googleapis.com/css2?family=Eczar:wght@400..800&display=swap');
+
 :root {
   --dark-green: #3e5b5b;
   --med-green: #578574;
@@ -13,6 +13,7 @@
 
 * {
   font-family: 'Eczar', sans-serif;
+  margin: 0;
 }
 
 body {
@@ -25,7 +26,7 @@ svg {
   top: 0;
   z-index: -1;
   width: 100%;
-  transform: scale(8);
+  transform: scale(1);
 }
 
 .GDDLabHeader {
@@ -89,67 +90,117 @@ nav {
   font-family: 'Eczar', sans-serif;
   font-weight: 500;
 }
-/* -- do not copy from here */
 
-#container-title {
-  color: var(--dark-green);
-  font-size: 3rem;
+body {
+  font-family: 'Eczar', serif;
+}
+
+.about-section {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.about-header {
+  font-size: 2.75rem;
+  color: #3e5b5b;
+  text-align: center;
   margin: 0;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.about-header2 {
+  font-size: 2.25rem;
+  color: #3e5b5b;
   text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
-.team-container {
-  background-color: white;
-  border-radius: 30px;
-  width: 90%;
-  margin-right: auto;
-  margin-left: auto;
-  display: flex;
-  flex-direction: column;
-  margin-top: 30px;
-  box-sizing: content-box;
-  box-shadow: 10px 10px 9px -1px rgba(0,0,0,0.3);
-  padding-bottom: 1%;
+.about-header3 {
+  font-size: 2.25rem;
+  color: #3e5b5b;
+  text-align: center;
+  margin: 0;
+  margin-top: 20px;
+  padding: 0;
 }
 
-.team-subcontainer {
+.credit {
+  font-style: italic;
+}
+
+.class {
+  margin: 20px 0;
+  line-height: 1.6;
+}
+
+.list {
+  max-width: 100%;
+  text-align: left;
+  padding-left: 30px;
+}
+
+.list li {
+  margin: 10px 0;
+}
+
+.header3 {
+  font-size: 2rem;
+  color: #3e5b5b;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.flex-container {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between; /* change? */
-  box-sizing: content-box;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
 }
 
-.team {
-  display: flex;
-  flex: 1 0 21%;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-}
-
-.team-container .icon {
-  width: 225px;
-  height: 225px;
-  border-radius: 50%;
-}
-
-.team-name {
-  margin-top: 0px;
+.cohort {
   text-align: center;
-  text-transform: uppercase;
-  font-weight: 500;
-  font-size: 1.5rem;
-  width: 75%;
+  width: auto;
+}
+
+.cohort-image {
+  width: 500px;
+}
+
+.cohort-label {
+  font-size: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.footer {
+  padding: 10px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer a {
   text-decoration: none;
   color: var(--black);
+  font-size: 2rem;
 }
 
-.team-name:hover {
-  color: var(--dark-green);
+.activeFooterTab, .unhighlight:hover {
+  color: var(--dark-green) !important;
   font-weight: bold;
 }
 
-.placeholder-confirm {
+.unhighlight {
+  opacity: .5;
+}
+
+.placeholder-about {
   text-align: center;
+  margin-top: 30px;
 }
