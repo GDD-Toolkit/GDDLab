@@ -1,0 +1,85 @@
+/* Global CSS stuff */
+@import url('https://fonts.googleapis.com/css2?family=Eczar:wght@400..800&display=swap');
+:root {
+  --dark-green: #3e5b5b;
+  --med-green: #578574;
+  --light-green: #8ab380;
+  --yellow-green: #d8df81;
+  --beige: #EFECCB;
+  --white: #fafafa;
+  --red: #CF0303;
+  --black: #1E1E1E;
+}
+
+* {
+  font-family: 'Eczar', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+  
+body {
+    overflow-x: hidden;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}  
+  
+.header {
+    color: var(--dark-green);
+    font-size: 3em;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.cohort-container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 3%;
+}
+
+.cohort-span {
+    width: 900px;
+    box-shadow: 10px 10px 0px 0px rgba(0,0,0,0.54);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#cohort-2021 {
+    width: 500px;
+}
+
+.footer {
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+  
+.footer a {
+    text-decoration: none;
+    color: var(--black);
+    font-size: 2rem;
+}
+  
+.activeFooterTab, .unhighlight:hover {
+    color: var(--dark-green) !important;
+    font-weight: bold;
+}
+  
+.unhighlight {
+    opacity: .5;
+}
