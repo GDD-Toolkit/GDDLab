@@ -63,16 +63,37 @@ app.get("/about-page", (request, response) => {
   response.render("About", { activeTab: "about", activeFooterTab: "About" });
 });
 
+app.get("/2020-cohort", (request, response) => {
+  response.render("cohort-pages/2020cohort", {
+    activeTab: "about",
+    activeFooterTab: "2020",
+  });
+});
+
+app.get("/2021-cohort", (request, response) => {
+  response.render("cohort-pages/2021cohort", {
+    activeTab: "about",
+    activeFooterTab: "2021",
+  });
+});
+
+app.get("/2022-cohort", (request, response) => {
+  response.render("cohort-pages/2022cohort", {
+    activeTab: "about",
+    activeFooterTab: "2022",
+  });
+});
+
 app.get("/2023-cohort", (request, response) => {
   response.render("cohort-pages/2023cohort", {
-    activeTab: "home",
+    activeTab: "about",
     activeFooterTab: "2023",
   });
 });
 
 app.get("/2024-cohort", (request, response) => {
   response.render("cohort-pages/2024cohort", {
-    activeTab: "home",
+    activeTab: "about",
     activeFooterTab: "2024",
   });
 });
