@@ -17,8 +17,9 @@
     </svg>
     <section>
       <%- include('navbar') %>
-      <form action="/confirmation-page" method="POST" class="form-container">
+      <form action="/confirmation-page" method="POST" class="form-container" name="bugForm">
         <h1 id="header">BUG FORM</h1>
+        <input type="hidden" name="formType" value="bugForm" />
 
         <p id="header-description">This form is the first process in
           removing/resolving a bug observed in the toolkit or in an affiliated

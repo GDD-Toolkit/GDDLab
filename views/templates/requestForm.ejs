@@ -13,8 +13,10 @@
       </path>
     </svg>
     <%-include('navbar')%>
-        <form action="/confirmation-page" method="POST" class="form-container">
+        <form action="/confirmation-page" method="POST" class="form-container" name="requestForm">
           <h1 id="header">REQUEST FORM</h1>
+          <input type="hidden" name="formType" value="requestForm" />
+
           <p id="header-description">
             This form is the first process in implementing/adding the requested feature or content. Once submitted, the form will be handed to Human-Centered Design who will contact the POC for feedback and approval. Finally, the design will be handed to Infrastructure and Interface for implementation.
           </p>

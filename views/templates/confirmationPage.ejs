@@ -7,6 +7,7 @@
     <title>GDDLab</title>
 
     <link rel="stylesheet" href="css/style.css" type="text/css"/>
+    <link rel="stylesheet" href="css/confirmation_page.css" type="text/css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Eczar:wght@400..800&display=swap" rel="stylesheet">
@@ -19,6 +20,20 @@
       </path>
     </svg>
     <%- include('navbar') %>
-    <p class="placeholder-confirm">Thank you for your submission! A PRM or a team member will reach out to you in 5-7 business days</p>
+    <section class="confirmation-container">
+      <center>
+        <p id="description">
+          <br>
+            Thank you for submitting the <%= formType %>.
+          <br><br>
+            Please reach out to Benjamin Huffman at bhuffman@umd.edu or via SLACK if you have any questions,
+            concerns, and or would like to provide additional information.
+          <br><br>
+            If you'd like to change your response, please reach out to bhuffman@umd.edu or resubmit the form by navigating back to the form.
+          <br><br>
+            You may exit this page.
+        </p>
+      </center>
+    </section>
   </body>
 </html>
